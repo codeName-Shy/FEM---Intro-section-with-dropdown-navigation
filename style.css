@@ -1,0 +1,196 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Epilogue', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 98%);
+}
+header{
+    padding: 16px 16px;
+    color: hsl(0, 0%, 41%);
+    font-weight: 500;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.menu--btn{
+    max-width: 40px;
+    max-height: 25px;
+    width: calc(1rem + 6vw) ;
+    height: calc(1rem + 2vw);
+}
+menu{
+    display: none;
+}
+.hero--mobile{
+    background-image: url(./images/image-hero-mobile.png);
+    background-size: cover;
+    background-repeat: none;
+    height: 90vw;
+    max-height: 300px;
+    margin-bottom: calc(1rem + 3vw);
+}
+.contents{
+    text-align: center;
+    margin: 0 20px;
+}
+h1{  
+    margin-bottom: calc(0.7rem + 1vw);
+    font-weight: 800;
+    font-size: calc(1rem + 3vw) ;
+    color: hsl(0, 0%, 8%);
+}
+.body-paragraph{  
+    margin-bottom: calc(15px + 2.5vw);
+    font-weight: 500;
+    font-size: calc(10px + 2vw);
+}
+p{
+    color: hsl(0, 0%, 41%);
+}
+button{
+    /* width: 140px;  */
+    justify-content: center;
+    align-items: center;
+    background-color:  hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    padding: 15px;
+    border-radius: 1rem;
+    margin-bottom: calc(1.5rem + 3vw);
+    font-size: 1rem;
+    font-family: 'Epilogue', sans-serif; 
+    font-weight: 700;
+}
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+footer img{
+    width:  calc(1rem + 12vw);
+}
+/* Tablet 375px */
+/* Mobile Active state (COLLAPSE)*/
+menu{
+    /* display: none; */
+}
+/*  Mobile Active state (EXPANDED) */
+
+
+/* Laptop 700px */
+@media screen and (min-width: 700px){
+    header{
+        padding: 1.5rem calc(1rem + 2vw) 1.9rem;
+    }
+    nav{
+        display: flex;
+        margin: 0;
+        /* border: 3px black solid; */
+    }
+    .logo{
+        margin-right:calc(1.4rem + 2vw);
+    }
+    .menu--btn{
+        display: none;
+    }
+    menu{
+        /* display: grid;
+        grid-template-rows: 0;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1px; */
+        display:flex ;
+        justify-content:space-between;
+        width: 90vw;
+        font-size: calc(0.5rem + 1vw);
+    }
+    .about--info{
+        display: flex;
+        justify-content:space-around;
+    }
+    .about--info p{
+        margin-right: 1.9rem;
+    }
+    .about--info p:hover{
+        cursor:pointer;
+    }
+    /* arrows beside feature and company */
+    .arrow{
+        background: url(./images/icon-arrow-down.svg);
+        background-repeat: no-repeat;
+
+    }
+    .account{
+        display: flex;
+        justify-content: right;
+    }
+    #login{
+        margin-right: 1.9rem;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:flex-start;
+        /* height: 100vw; */
+        /* border: 2px royalblue solid; */
+        margin-bottom: 3rem;
+    }
+    .hero--mobile{
+        display: none;
+    }
+    .hero--desktop{
+        background-image: url(./images/image-hero-desktop.png);
+        background-size:90%;
+        height: 80vh;
+        width: 35vw;
+        margin-bottom: calc(1rem + 3vw);
+        /* display: none; */
+        /* border: 2px solid skyblue; */
+        margin: 0 3vw;
+
+    }
+    .contents{
+        text-align: left;
+        margin: 0 3vw;
+        /* border: 2px solid red; */
+        width: 40vw;
+        align-items: flex-start;
+        height: 80vh;
+        position: relative;
+        
+    }
+    h1{  
+        margin-bottom: 1.5vw;
+        margin-top: 2vw;
+        font-weight: 700;
+        font-size: calc(1rem + 3vw) ;
+    }
+    .body-paragraph{  
+        font-weight: 500;
+        color: hsl(0, 0%, 41%);
+        font-size: calc(0.5rem + 1vw) ;
+        margin-bottom: calc(1rem + 1vw) ;
+    }
+    button{
+        margin: 0;
+        margin-top: 0;
+        margin-bottom:4vw;
+    }
+    footer{
+        /* display: none; */
+        display: flex;
+        justify-content:space-between;
+        align-items: flex-end;
+        margin-bottom: 0;
+    }
+    footer img{
+        width:  calc(1rem + 5vw);
+    }
+}
+/* Desktop 1440px*/
+/* Desktop active State */
