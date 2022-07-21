@@ -121,6 +121,9 @@ menu{
     .about--info p:hover{
         cursor:pointer;
     }
+    .account p:hover{
+        cursor:pointer;
+    }
     /* arrows beside feature and company */
     .arrow{
         background: url(./images/icon-arrow-down.svg);
@@ -183,6 +186,12 @@ menu{
         margin: 0;
         margin-top: 0;
         margin-bottom:4vw;
+    }
+    button:hover{
+        cursor:pointer;
+        background-color: hsl(0, 0%, 98%) ;
+        color: hsl(0, 0%, 8%);
+        border-width: 1.5px;
     }
     footer{
         /* display: none; */
