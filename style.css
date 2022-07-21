@@ -14,9 +14,6 @@ header{
     color: hsl(0, 0%, 41%);
     font-weight: 500;
 }
-.logo{
-    width: calc(3rem + 4vw);
-}
 nav{
     display: flex;
     justify-content: space-between;
@@ -78,17 +75,19 @@ footer img{
     width:  calc(1rem + 12vw);
 }
 /* Tablet 375px */
-/* Mobile Active state (COLLAPSE)*/
+/* ! Mobile Active state (COLLAPSE)*/
 menu{
     /* display: none; */
 }
-/*  Mobile Active state (EXPANDED) */
+/* ! Mobile Active state (EXPANDED) */
 
 
-/* Laptop 700px */
+/* ? Laptop 700px */
 @media screen and (min-width: 700px){
     header{
         padding: 1.5rem calc(1rem + 2vw) 1.9rem;
+        /* border: 3px black solid; */
+        max-height: 10px;
     }
     nav{
         display: flex;
@@ -97,15 +96,15 @@ menu{
     }
     .logo{
         margin-right:calc(1.4rem + 2vw);
+        width: calc(1.4rem + 2vw);
+        height: calc(1.2rem + 1vw);
     }
+    /* DROPDOWN */
+
     .menu--btn{
         display: none;
     }
     menu{
-        /* display: grid;
-        grid-template-rows: 0;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 1px; */
         display:flex ;
         justify-content:space-between;
         width: 90vw;
@@ -121,14 +120,50 @@ menu{
     .about--info p:hover{
         cursor:pointer;
     }
-    .account p:hover{
-        cursor:pointer;
+    /*! arrows beside feature and company */
+    .arrow-up{
+        width: calc(0.2rem + 1vw);
     }
-    /* arrows beside feature and company */
-    .arrow{
-        background: url(./images/icon-arrow-down.svg);
-        background-repeat: no-repeat;
+    /* ! Animate arrow such that, when you clicked it the rotates 180 degrees*/
+    /* ! DROPDOWN */
+    .dropdown{
+        position: relative;
+        z-index: 999;
+        /* border: 3px orangered solid; */
+    }
+    .dropdown-content a{
+        font-size: calc(0.2rem + 1vw);
+    }
 
+    .dropdown-content{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 0.5rem;
+        text-align: left;
+        padding: calc(0.2rem + 1vw) calc(0.5rem + 1vw) 0;
+        /* width: 130px; */
+        margin-top: 15px;
+        /* border: 3px green solid; */    
+    }
+    .feature-align{
+        position: absolute;
+        right: 35px;
+    }
+    .dropdown-item{
+        display: flex;
+        text-decoration: none;
+        color: hsl(0, 0%, 8%);
+        margin-bottom: 1rem;
+        z-index: 999;
+
+    }
+    /* ! icons */
+    .dropdown-item img{
+        margin-right: 15px ;
+        width: 1rem;
+    }
+    /* ! END DROPDOWN*/
+    .account p:hover{
+        cursor: pointer;
     }
     .account{
         display: flex;
@@ -141,10 +176,10 @@ menu{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items:flex-start;
-        /* height: 100vw; */
-        /* border: 2px royalblue solid; */
+        align-items:flex-end;
         margin-bottom: 3rem;
+        height: 90vh;
+        /* border: 2px royalblue solid; */
     }
     .hero--mobile{
         display: none;
@@ -155,50 +190,42 @@ menu{
         height: 80vh;
         width: 35vw;
         margin-bottom: calc(1rem + 3vw);
-        /* display: none; */
-        /* border: 2px solid skyblue; */
         margin: 0 3vw;
-
+        /* border: 2px solid skyblue; */
     }
     .contents{
         text-align: left;
         margin: 0 3vw;
         /* border: 2px solid red; */
         width: 40vw;
-        align-items: flex-start;
-        height: 80vh;
-        position: relative;
-        
+        align-items: flex-end;
+        position: relative;  
     }
     h1{  
         margin-bottom: 1.5vw;
-        margin-top: 2vw;
         font-weight: 700;
-        font-size: calc(1rem + 3vw) ;
+        font-size: calc(1rem + 2.5vw) ;
+        z-index: 1;
     }
     .body-paragraph{  
         font-weight: 500;
         color: hsl(0, 0%, 41%);
-        font-size: calc(0.5rem + 1vw) ;
-        margin-bottom: calc(1rem + 1vw) ;
+        font-size: calc(0.3rem + 1vw) ;
+        margin-bottom: calc(0.3rem + 1vw) ;
+        width: 350px;
     }
     button{
-        margin: 0;
-        margin-top: 0;
-        margin-bottom:4vw;
-    }
-    button:hover{
-        cursor:pointer;
-        background-color: hsl(0, 0%, 98%) ;
-        color: hsl(0, 0%, 8%);
-        border-width: 1.5px;
+        padding: calc(0.1rem + 1vw);
+        font-size: calc(0.4rem + 1vw);
+        margin-bottom: 3rem;
+        border-radius: 0.5em;
     }
     footer{
-        /* display: none; */
         display: flex;
         justify-content:space-between;
         align-items: flex-end;
         margin-bottom: 0;
+        padding-bottom: 0 ;
     }
     footer img{
         width:  calc(1rem + 5vw);
