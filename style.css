@@ -95,7 +95,7 @@ menu{
     nav{
         display: flex;
         margin: 0;
-        /* border: 3px black solid; */
+        /* border: 3px grey solid; */
     }
     .logo{
         margin-right:calc(1.4rem + 2vw);
@@ -112,7 +112,8 @@ menu{
         display:flex ;
         justify-content:space-between;
         width: 90vw;
-        font-size: calc(0.5rem + 1vw);
+        font-size: calc(0.4rem + 1vw);
+        /* border: 3px pink solid; */
     }
     .about--info{
         display: flex;
@@ -140,6 +141,8 @@ menu{
     }
 
     .dropdown-content{
+        display: none;
+        /* display: block; */
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border-radius: 0.5rem;
         text-align: left;
@@ -208,21 +211,21 @@ menu{
     h1{  
         margin-bottom: 1.5vw;
         font-weight: 700;
-        font-size: calc(1rem + 2.5vw) ;
+        font-size: calc(1rem + 2.8vw) ;
         z-index: 1;
     }
     .body-paragraph{  
         font-weight: 500;
         color: hsl(0, 0%, 41%);
         font-size: calc(0.3rem + 1vw) ;
-        margin-bottom: calc(0.3rem + 1vw) ;
+        margin-bottom: calc(1rem + 1vw) ;
         width: 350px;
     }
     button{
         padding: calc(0.1rem + 1vw);
         font-size: calc(0.4rem + 1vw);
-        margin-bottom: 3rem;
-        border-radius: 0.5em;
+        margin-bottom: calc(3rem) ;
+        border-radius: 1rem;
     }
     footer{
         display: flex;
