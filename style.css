@@ -18,6 +18,9 @@ nav{
     display: flex;
     justify-content: space-between;
 }
+.logo{
+    width: calc(3rem + 4vw);
+}
 .menu--btn{
     max-width: 40px;
     max-height: 25px;
@@ -96,9 +99,10 @@ menu{
     }
     .logo{
         margin-right:calc(1.4rem + 2vw);
-        width: calc(1.4rem + 2vw);
-        height: calc(1.2rem + 1vw);
+        width: calc(3rem + 2vw);
+        height: calc(0.5rem + 2vw);
     }
+    
     /* DROPDOWN */
 
     .menu--btn{
