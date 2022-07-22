@@ -30,6 +30,35 @@ nav{
 menu{
     display: none;
 }
+/* !MOBILE */
+.mobile--menu{
+    background-color: rgb(225, 155, 102);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    /* display: none; */
+    width: 70vw;
+    height: 140vh;
+    text-align: left;
+
+}
+/* ! X ICON */
+.close--menu{
+    width: 1rem;
+}
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+.dropdown-content{
+    display: flex;
+    flex-direction: column;
+    border: 2px rebeccapurple solid;
+}
+/* !  */
 .hero--mobile{
     background-image: url(./images/image-hero-mobile.png);
     background-size: cover;
@@ -133,10 +162,11 @@ menu{
     /* ! DROPDOWN */
     .dropdown{
         position: relative;
-        z-index: 999;
+        /* z-index: 999; */
         /* border: 3px orangered solid; */
     }
     .dropdown-content a{
+        display: none;
         font-size: calc(0.2rem + 1vw);
     }
 
@@ -156,7 +186,10 @@ menu{
         right: 35px;
     }
     .dropdown-item{
-        display: flex;
+        
+        /* display: flex; */
+        display: none;
+
         text-decoration: none;
         color: hsl(0, 0%, 8%);
         margin-bottom: 1rem;
